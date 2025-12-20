@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>
+        Grave Hound - Gallery
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images\logo.jpeg">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+
+    <section class="product-grid">
+        <div class="product-card">
+            <div class="carousel">
+                <img src="images/bfsucks.png" alt="Your Boyfriend Sucks" class="carousel-image active">
+                <img src="images/seedhemaut.png" alt="Seedhe Maut" class="carousel-image">
+                <img src="images/logo.jpeg" alt="Hound" class="carousel-image">
+                <button class="prev" onclick="prevImage(this)">&#10094;</button>
+                <button class="next" onclick="nextImage(this)">&#10095;</button>
+            </div>
+            <h3>Your Boyfriend Sucks</h3>
+            <p>₹899</p>
+        </div>
+        <div class="product-card">
+            <img src="images\seedhemaut.png" alt="Seedhe Maut">
+            <h3>Seedhe Maut</h3>
+            <p>₹899</p>
+        </div>
+        <div class="product-card">
+            <img src="images\logo.jpeg" alt="Hound">
+            <h3>Hound</h3>
+            <p>₹899</p>
+        </div>
+        <div class="product-card">
+            <img src="images\regaining.png" alt="Regaining Strength">
+            <h3>Regaining Strength</h3>
+            <p>₹899</p>
+        </div>
+    </section>
+
+<script>
+function showImage(images, index) {
+    images.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+    });
+}
+
+function prevImage(button) {
+    const carousel = button.parentElement;
+    const images = Array.from(carousel.querySelectorAll('.carousel-image'));
+    let currentIndex = images.findIndex(img => img.classList.contains('active'));
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(images, currentIndex);
+}
+
+function nextImage(button) {
+    const carousel = button.parentElement;
+    const images = Array.from(carousel.querySelectorAll('.carousel-image'));
+    let currentIndex = images.findIndex(img => img.classList.contains('active'));
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(images, currentIndex);
+}
+</script>
