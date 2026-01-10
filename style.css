@@ -13,7 +13,7 @@ body {
 .header {
     width: 100%;
     min-height: 100vh;
-    background-image: linear-gradient(rgba(41, 41, 41, 0), rgba(3, 3, 3, 0.7)), url(images/gravehound.jpg);
+    background-image: linear-gradient(rgba(41, 41, 41, 0), rgba(3, 3, 3, 0.7)), url(gravehound.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -279,3 +279,4 @@ nav ul li a:active {
         justify-content: center;
     }
 }
+
