@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Grave Hound - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.jpeg">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html"><u>Home</u></a></li>
+            <li><a href="gallery.html"><u>Gallery</u></a></li>
+            <li><a href="about.html"><u>About</u></a></li>
+            <li><a href="cart.html"><u>Cart</u></a></li>
+            <li><a href="login.html" class="active"><u>Login</u></a></li>
+        </ul>
+    </nav>
+    <div class="auth-section">
+        <div class="auth-card">
+            <h2>Login</h2>
+            <form action="login.php" name="login" id="login" class="auth-form">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" id="submit" name="submit" class="auth-btn">Login</button>
+                <div class="auth-link">
+                    Don't have an account? <a href="signup.html">Sign Up</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
