@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add click event to all gallery images
     const galleryImages = document.querySelectorAll('.gallery-grid .product-card img');
     galleryImages.forEach(img => {
+        img.style.cursor = 'zoom-in';
         img.addEventListener('click', () => {
             lightbox.classList.add('active');
             lightboxImg.src = img.src;
@@ -33,7 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) {
+        if (e.target === lightbox || e.target.classList.contains('lightbox-close')) {
+            lightbox.classList.remove('active');
+        }
+    });
+
+    // Handle Escape key for lightbox
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
             lightbox.classList.remove('active');
         }
     });

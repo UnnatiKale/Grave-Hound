@@ -83,10 +83,27 @@ function updateCartDisplay() {
     }
 }
 
+function showToast(message) {
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.textContent = message;
+    document.body.appendChild(toast);
+
+    // Trigger animation
+    setTimeout(() => toast.classList.add('show'), 100);
+
+    // Remove toast
+    setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => toast.remove(), 300);
+    }, 3000);
+}
+
 function addToCart(item) {
     cart.push(item);
     localStorage.setItem('gravehoundCart', JSON.stringify(cart));
     updateCartDisplay();
+    showToast(`${item.name} added to shadows.`);
 }
 
 const addToCartBtns = document.querySelectorAll('.add-to-cart');
