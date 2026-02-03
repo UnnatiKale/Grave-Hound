@@ -1,6 +1,6 @@
 Gravehound is a sleek and modern streetwear e-commerce website frontend. It features an interactive product gallery, dynamic cart functionality, and a smooth dark/light mode toggle, providing a seamless shopping experience.
 
-The website is live at:https://gravehound.netlify.app/
+The website is live at https://unnatikale.github.io/Grave-Hound/
 
 - **Responsive Product Gallery**: Displays all products with hover effects and organized grid layout.
 - **Add to Cart**: Click the cart icon to add products; cart data is stored in `localStorage` for persistence.
