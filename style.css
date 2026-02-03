@@ -1,7 +1,7 @@
 :root {
     --bg-color: #050505;
     --card-bg: #1a1a1a;
-    --accent-color: #bisque;
+    --accent-color: bisque;
     --text-color: #ffffff;
     --text-muted: #a0a0a0;
     --border-color: #333333;
@@ -27,16 +27,13 @@ body {
     min-height: 100vh;
     background-position: center;
     background-size: cover;
-    display: block;
+    display: flex;
     align-items: center;
     justify-content: center;
-    object-fit: cover;
-    object-position: center;
-
 }
 
 .bgimage {
-    display: inline;
+    display: block;
     object-fit: cover;
     object-position: center;
     width: 100%;
@@ -75,7 +72,7 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-    color: bisque;
+    color: var(--accent-color);
 }
 
 /* Product Grid & Cards */
@@ -117,7 +114,7 @@ nav ul li a.active {
 
 .product-card p {
     font-size: 1.1rem;
-    color: bisque;
+    color: var(--accent-color);
     margin-bottom: 15px;
     font-weight: 600;
 }
@@ -125,7 +122,7 @@ nav ul li a.active {
 .product-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 30px rgba(96, 96, 96, 0.5);
-    border-color: bisque;
+    border-color: var(--accent-color);
 }
 
 .product-card .add-to-cart {
@@ -139,7 +136,7 @@ nav ul li a.active {
 
 .product-card .add-to-cart:hover {
     transform: scale(1.2);
-    color: bisque;
+    color: var(--accent-color);
     opacity: 1;
 }
 
@@ -192,13 +189,13 @@ nav ul li a.active {
 }
 
 .input-group input:focus {
-    border-color: bisque;
+    border-color: var(--accent-color);
 }
 
 .auth-btn {
     width: 100%;
     padding: 14px;
-    background: bisque;
+    background: var(--accent-color);
     color: black;
     border: none;
     border-radius: 8px;
@@ -223,7 +220,7 @@ nav ul li a.active {
 }
 
 .auth-link a {
-    color: bisque;
+    color: var(--accent-color);
     text-decoration: none;
 }
 
@@ -270,7 +267,7 @@ footer {
 }
 
 .footer-links a:hover {
-    color: bisque;
+    color: var(--accent-color);
     padding-left: 5px;
 }
 
@@ -286,7 +283,7 @@ footer {
 }
 
 .social-links a:hover {
-    color: bisque;
+    color: var(--accent-color);
     transform: translateY(-3px);
 }
 
@@ -306,7 +303,7 @@ footer {
 
 .newsletter-form button {
     padding: 0 20px;
-    background: bisque;
+    background: var(--accent-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -415,7 +412,7 @@ footer {
 }
 
 .cart-item-price {
-    color: bisque;
+    color: var(--accent-color);
     font-weight: 600;
 }
 
@@ -459,7 +456,7 @@ footer {
 .checkout-btn {
     width: 100%;
     padding: 15px;
-    background: bisque;
+    background: var(--accent-color);
     color: black;
     border: none;
     border-radius: 8px;
@@ -522,7 +519,7 @@ footer {
 
 .about-tagline {
     font-size: 1.1rem;
-    color: bisque;
+    color: var(--accent-color);
     letter-spacing: 0.3rem;
     margin-bottom: 80px;
     text-transform: uppercase;
@@ -531,7 +528,7 @@ footer {
 
 .about-content h2 {
     font-size: 2.2rem;
-    color: bisque;
+    color: var(--accent-color);
     margin-bottom: 20px;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
@@ -573,7 +570,7 @@ footer {
 .gallery-grid .product-card:hover {
     transform: translateY(-15px);
     box-shadow: 0 10px 30px rgba(102, 102, 102, 0.5);
-    border-color: bisque;
+    border-color: var(--accent-color);
 }
 
 .gallery-grid .product-card:hover img {
